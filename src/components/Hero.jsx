@@ -1,61 +1,75 @@
-const githubUrl = "https://github.com/VanessDev";
-// LinkedIn: on mettra le lien quand il sera prêt
-const email = "vanessa.biamonti@gmail.com";
+import hero from "../assets/hero-dev.png";
 
 export default function Hero() {
   return (
-    <section id="top" className="mx-auto max-w-5xl px-4 pt-24 pb-10">
-      <div className="rounded-3xl bg-sand border border-black/5 p-8 md:p-10">
-        <p className="text-xs uppercase tracking-[0.28em] text-ink/60">
-          Développeuse Full Stack — React / Node.js
-        </p>
+    <section className="mx-auto max-w-6xl px-4 pt-16 pb-12">
+      <div className="grid md:grid-cols-2 items-center gap-10">
+        {/* TEXTE */}
+        <div>
+          <p className="text-xs tracking-widest text-ink/60 uppercase">
+            Développeuse Full Stack — React / Node.js
+          </p>
 
-        <h1 className="mt-4 text-3xl md:text-5xl font-semibold leading-tight">
-          Vanessa <span className="text-cocoa">Biamonti</span>
-        </h1>
+          <h1 className="mt-4 text-4xl md:text-5xl font-bold">
+            Vanessa <span className="text-cocoa">Biamonti</span>
+          </h1>
 
-        <p className="mt-4 max-w-2xl text-ink/80 leading-relaxed">
-          Développeuse full stack en formation RNCP niveau 5, spécialisée React
-          / Node.js. Je conçois et implémente des applications web complètes
-          (front & back), avec une attention particulière à l’architecture, la
-          base de données et l’UX.
-        </p>
+          <p className="mt-6 max-w-xl text-ink/80 leading-relaxed">
+            Développeuse full stack en formation RNCP niveau 5, spécialisée
+            React / Node.js. Je conçois et implémente des applications web
+            complètes (front & back), avec une attention particulière à
+            l’architecture, la base de données et l’UX.
+          </p>
 
-        <div className="mt-6 flex flex-wrap gap-3">
-          <a
-            href="#projects"
-            className="inline-flex items-center justify-center rounded-full bg-ink text-white px-6 py-3 text-sm font-medium hover:scale-105 transition"
-          >
-            Voir mes projets
-          </a>
+          {/* boutons */}
+          <div className="mt-8 flex flex-wrap gap-4">
+            <a
+              href="#projects"
+              className="rounded-full bg-black text-white px-6 py-3 text-sm font-medium hover:scale-105 transition"
+            >
+              Voir mes projets
+            </a>
 
-          <a
-            href={githubUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center justify-center rounded-full border border-black/15 px-5 py-2.5 text-sm font-medium hover:border-black/30 transition"
-          >
-            GitHub
-          </a>
+            <a
+              href="https://github.com/VanessDev"
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-full border border-black/15 px-6 py-3 text-sm font-medium hover:border-black/30 transition"
+            >
+              GitHub
+            </a>
 
-          <a
-            href={`mailto:${email}`}
-            className="inline-flex items-center justify-center rounded-full border border-black/15 px-5 py-2.5 text-sm font-medium hover:border-black/30 transition"
-          >
-            Me contacter
-          </a>
+            <a
+              href="#contact"
+              className="rounded-full border border-black/15 px-6 py-3 text-sm font-medium hover:border-black/30 transition"
+            >
+              Me contacter
+            </a>
+          </div>
+
+          {/* chips */}
+          <div className="mt-8 flex flex-wrap gap-3 text-sm">
+            <span className="bg-white border border-black/10 px-3 py-1 rounded-full">
+              Bordeaux
+            </span>
+
+            <span className="bg-white border border-black/10 px-3 py-1 rounded-full">
+              Mobilité : France entière
+            </span>
+
+            <span className="bg-white border border-black/10 px-3 py-1 rounded-full">
+              Anglais courant
+            </span>
+          </div>
         </div>
 
-        <div className="mt-6 flex flex-wrap gap-2 text-xs text-ink/70">
-          <span className="rounded-full bg-white px-3 py-1 border border-black/5">
-            Bordeaux
-          </span>
-          <span className="rounded-full bg-white px-3 py-1 border border-black/5">
-            Mobilité : France entière (priorité Marseille, Lille, Bordeaux)
-          </span>
-          <span className="rounded-full bg-white px-3 py-1 border border-black/5">
-            Anglais courant
-          </span>
+        {/* IMAGE */}
+        <div className="flex justify-center">
+          <img
+            src={hero}
+            alt="Developer workspace illustration"
+            className="max-w-md w-full animate-float"
+          />
         </div>
       </div>
     </section>
