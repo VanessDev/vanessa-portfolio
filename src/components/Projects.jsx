@@ -1,4 +1,5 @@
 import marsai from "../assets/marsai.png";
+import Reveal from "./Reveal";
 
 const projects = [
   {
@@ -47,16 +48,26 @@ const projects = [
       "Structure MVC + base de données relationnelle",
       "Projet évalué 19/20 — Meilleure note de la promotion",
     ],
-    links: [],
+    links: [
+      {
+        label: "Repo",
+        href: "https://github.com/laplateformeio/mediatheque-bdx-grp3",
+      },
+    ],
     tag: "Projet école",
   },
 ];
 
 function ProjectCard({ p }) {
   return (
-    <article className="rounded-2xl border border-black/10 bg-white overflow-hidden hover:border-black/20 transition">
+    <article className="group rounded-2xl border border-black/10 bg-white overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-black/5 hover:border-black/20">
       {p.image && (
-        <img src={p.image} alt={p.title} className="w-full h-48 object-cover" />
+        <img
+          src={p.image}
+          alt={p.title}
+          className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+          loading="lazy"
+        />
       )}
 
       <div className="p-6">
@@ -104,14 +115,18 @@ function ProjectCard({ p }) {
 export default function Projects() {
   return (
     <section id="projects" className="mx-auto max-w-5xl px-4 py-10">
-      <div className="flex items-end justify-between gap-4">
-        <h2 className="text-2xl font-semibold">Projets</h2>
-        <p className="text-sm text-ink/70">Sélection — focus full stack</p>
-      </div>
+      <Reveal>
+        <div className="flex items-end justify-between gap-4">
+          <h2 className="text-2xl font-semibold">Projets</h2>
+          <p className="text-sm text-ink/70">Sélection — focus full stack</p>
+        </div>
+      </Reveal>
 
       <div className="mt-6 grid gap-5">
-        {projects.map((p) => (
-          <ProjectCard key={p.title} p={p} />
+        {projects.map((p, idx) => (
+          <Reveal key={p.title} delay={idx * 90}>
+            <ProjectCard p={p} />
+          </Reveal>
         ))}
       </div>
     </section>
