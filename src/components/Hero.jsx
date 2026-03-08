@@ -40,6 +40,15 @@ export default function Hero() {
             </a>
 
             <a
+              href="https://www.linkedin.com/in/vanessa-biamonti-a10a6b364/"
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-full border border-black/15 px-6 py-3 text-sm font-medium hover:border-black/30 transition"
+            >
+              LinkedIn
+            </a>
+
+            <a
               href="#contact"
               className="rounded-full border border-black/15 px-6 py-3 text-sm font-medium hover:border-black/30 transition"
             >

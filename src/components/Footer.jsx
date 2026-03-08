@@ -21,7 +21,12 @@ export default function Footer() {
             GitHub
           </a>
 
-          <a href="#" className="hover:text-black transition">
+          <a
+            href="https://www.linkedin.com/in/vanessa-biamonti-a10a6b364/"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:text-black transition"
+          >
             LinkedIn
           </a>
         </div>
